@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.kotlinAndroid)
+    alias(libs.plugins.ksp)
     id("kotlin-parcelize")
 }
 
@@ -24,7 +25,6 @@ android {
 
     buildTypes {
         getByName("debug") {
-            // Configurações específicas para debug, se necessário
         }
         getByName("release") {
             isMinifyEnabled = true
@@ -59,6 +59,8 @@ dependencies {
 
     implementation(libs.koinCore)
     implementation(libs.koinAndroid)
+    implementation(libs.koin.annotations)
+    ksp(libs.koin.compiler)
 
     implementation(libs.lifecycleViewModelKtx)
     implementation(libs.lifecycleLiveDataKtx)
@@ -85,7 +87,6 @@ dependencies {
     testImplementation(libs.junit)
     testImplementation(libs.mockitoCore)
     testImplementation(libs.mockitoKotlin)
-    testImplementation(libs.coreKtxTest)
     implementation(libs.koinTest)
 
     androidTestImplementation(libs.testRunner)

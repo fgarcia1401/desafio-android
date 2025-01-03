@@ -2,7 +2,7 @@
 agp = "8.4.2"
 kotlin = "2.0.20"
 appcompat = "1.7.0"
-coreKtx = "1.15.0"
+coreKtx = "1.13.1"
 constraintLayout = "2.2.0"
 material = "1.12.0"
 retrofit = "2.9.0"
@@ -11,15 +11,18 @@ picasso = "2.71828"
 circleImageView = "3.1.0"
 junit = "4.13.2"
 mockito = "4.11.0"
-mockitoKotlin = "4.1.0"
+mockitoKotlin = "2.2.0"
 testRunner = "1.6.2"
 espresso = "3.6.1"
 koin = "3.5.6"
+koin-annotations-bom = "1.3.0"
 lifecycle = "2.8.7"
 coroutines = "1.8.1"
 rxjava = "2.2.21"
 rxandroid = "2.1.1"
-coreKtxTest = "2.2.0"
+coreKtxTest = "1.5.0"
+jetbrainsKotlinJvm = "2.0.20"
+ksp = "2.0.20-1.0.25"
 
 [libraries]
 kotlinStdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
@@ -29,6 +32,9 @@ constraintLayout = { module = "androidx.constraintlayout:constraintlayout", vers
 material = { module = "com.google.android.material:material", version.ref = "material" }
 koinCore = { module = "io.insert-koin:koin-core", version.ref = "koin" }
 koinAndroid = { module = "io.insert-koin:koin-android", version.ref = "koin" }
+koin-annotations = { module = "io.insert-koin:koin-annotations", version.ref = "koin-annotations-bom" }
+koin-compiler = { module = "io.insert-koin:koin-ksp-compiler", version.ref = "koin-annotations-bom" }
+koin-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koin" }
 lifecycleViewModelKtx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
 lifecycleLiveDataKtx = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "lifecycle" }
 lifecycleRuntimeKtx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycle" }
@@ -48,7 +54,6 @@ circleImageView = { module = "de.hdodenhof:circleimageview", version.ref = "circ
 junit = { module = "junit:junit", version.ref = "junit" }
 mockitoCore = { module = "org.mockito:mockito-core", version.ref = "mockito" }
 mockitoKotlin = { module = "com.nhaarman.mockitokotlin2:mockito-kotlin", version.ref = "mockitoKotlin" }
-coreKtxTest = { module = "androidx.arch.core:core-testing", version.ref = "coreKtxTest" }
 koinTest = { module = "io.insert-koin:koin-test", version.ref = "koin" }
 testRunner = { module = "androidx.test:runner", version.ref = "testRunner" }
 espressoCore = { module = "androidx.test.espresso:espresso-core", version.ref = "espresso" }
@@ -56,4 +61,7 @@ testCoreKtx = { module = "androidx.test:core-ktx", version.ref = "coreKtxTest" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
+androidLibrary = { id = "com.android.library", version.ref = "agp" }
 kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+jetbrainsKotlinJvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrainsKotlinJvm" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
