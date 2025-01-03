@@ -2,16 +2,14 @@ package com.picpay.desafio.android
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
-import com.squareup.picasso.Callback
-import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.list_item_user.view.*
+//import kotlinx.android.synthetic.main.list_item_user.view.*
 
 class UserListItemViewHolder(
     itemView: View
 ) : RecyclerView.ViewHolder(itemView) {
 
     fun bind(user: User) {
-        itemView.name.text = user.name
+        /*itemView.name.text = user.name
         itemView.username.text = user.username
         itemView.progressBar.visibility = View.VISIBLE
         Picasso.get()
@@ -25,6 +23,6 @@ class UserListItemViewHolder(
                 override fun onError(e: Exception?) {
                     itemView.progressBar.visibility = View.GONE
                 }
-            })
+            }) */
     }
 }
