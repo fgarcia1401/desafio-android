@@ -1,0 +1,5 @@
+<resources>
+    <string name="toolbar_title">Desafio Android</string>
+    <string name="title_list">Lista de Contatos</string>
+    <string name="error_list">Ocorreu um erro ao carregar lista. Tente novamente mais tarde.</string>
+</resources>

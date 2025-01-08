@@ -22,3 +22,6 @@ dependencyResolutionManagement {
 rootProject.name = "desafio-android"
 include(":app")
 include(":core:network")
+include(":features:contacts")
+include(":common")
+include(":core:compose")

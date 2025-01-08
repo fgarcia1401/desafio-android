@@ -1,6 +1,6 @@
-package com.picpay.desafio.android.providers
+package com.picpay.desafio.android.core.network.providers
 
-import com.picpay.desafio.android.BuildConfig
+import com.picpay.desafio.android.core.network.BuildConfig
 import org.koin.core.annotation.Factory
 
 @Factory

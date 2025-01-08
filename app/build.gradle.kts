@@ -51,6 +51,12 @@ android {
 }
 
 dependencies {
+    //Features
+    implementation(project(":features:contacts"))
+    implementation(project(":core:compose"))
+    implementation(project(":core:network"))
+    implementation(project(":common"))
+
     implementation(libs.kotlinStdlib)
     implementation(libs.coreKtx)
     implementation(libs.appCompat)
@@ -92,6 +98,20 @@ dependencies {
     androidTestImplementation(libs.testRunner)
     androidTestImplementation(libs.espressoCore)
     androidTestImplementation(libs.testCoreKtx)
+
+    // Navigation Component
+    implementation(libs.navigation.fragment.ktx)
+    implementation(libs.navigation.ui.ktx)
+
+    // Jetpack Compose
+    implementation(libs.androidx.compose.ui)
+    implementation(libs.androidx.compose.material)
+    implementation(libs.androidx.compose.ui.tooling.preview)
+    implementation(libs.navigation.compose)
+    implementation(libs.androidx.compose.foundation)
+
+    debugImplementation(libs.androidx.compose.ui.tooling)
+    debugImplementation(libs.androidx.compose.ui.test.manifest)
 }
 
 

@@ -1,8 +1,8 @@
 [versions]
 agp = "8.4.2"
-kotlin = "2.0.20"
+kotlin = "2.0.0"
 appcompat = "1.7.0"
-coreKtx = "1.13.1"
+coreKtx = "1.15.0"
 constraintLayout = "2.2.0"
 material = "1.12.0"
 retrofit = "2.9.0"
@@ -20,9 +20,13 @@ lifecycle = "2.8.7"
 coroutines = "1.8.1"
 rxjava = "2.2.21"
 rxandroid = "2.1.1"
-coreKtxTest = "1.5.0"
-jetbrainsKotlinJvm = "2.0.20"
+coreKtxTest = "1.6.1"
 ksp = "2.0.20-1.0.25"
+junitVersion = "1.2.1"
+navigation = "2.8.5"
+compose = "1.7.6"
+coil = "2.5.0"
+compose-navigation = "2.8.5"
 
 [libraries]
 kotlinStdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
@@ -35,6 +39,7 @@ koinAndroid = { module = "io.insert-koin:koin-android", version.ref = "koin" }
 koin-annotations = { module = "io.insert-koin:koin-annotations", version.ref = "koin-annotations-bom" }
 koin-compiler = { module = "io.insert-koin:koin-ksp-compiler", version.ref = "koin-annotations-bom" }
 koin-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koin" }
+coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
 lifecycleViewModelKtx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
 lifecycleLiveDataKtx = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "lifecycle" }
 lifecycleRuntimeKtx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycle" }
@@ -58,10 +63,22 @@ koinTest = { module = "io.insert-koin:koin-test", version.ref = "koin" }
 testRunner = { module = "androidx.test:runner", version.ref = "testRunner" }
 espressoCore = { module = "androidx.test.espresso:espresso-core", version.ref = "espresso" }
 testCoreKtx = { module = "androidx.test:core-ktx", version.ref = "coreKtxTest" }
+ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+navigation-fragment-ktx = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "navigation" }
+navigation-ui-ktx = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigation" }
+androidx-compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
+androidx-compose-material = { module = "androidx.compose.material:material", version.ref = "compose" }
+androidx-compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
+androidx-compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
+androidx-compose-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "compose" }
+navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "compose-navigation" }
+androidx-compose-foundation = { module = "androidx.compose.foundation:foundation-layout", version.ref = "compose" }
+
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 androidLibrary = { id = "com.android.library", version.ref = "agp" }
 kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-jetbrainsKotlinJvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrainsKotlinJvm" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+

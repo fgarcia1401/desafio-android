@@ -1,9 +1,10 @@
-package com.picpay.desafio.android.retrofit
+package com.picpay.desafio.android.core.network.retrofit
 
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
-import com.picpay.desafio.android.providers.NetworkConfigurationProvider
+import com.picpay.desafio.android.core.network.providers.NetworkConfigurationProvider
 import okhttp3.OkHttpClient
+import org.koin.core.annotation.ComponentScan
 import org.koin.core.annotation.Module
 import org.koin.core.annotation.Single
 import retrofit2.Retrofit
@@ -11,6 +12,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
 @Module
+@ComponentScan("com.picpay.desafio.android.core.network")
 class NetworkModule {
     @Single
     fun provideGson(): Gson = GsonBuilder().create()
@@ -32,5 +34,4 @@ class NetworkModule {
         .addConverterFactory(GsonConverterFactory.create(gson))
         .client(okHttpClient)
         .build()
-
 }

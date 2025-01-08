@@ -14,14 +14,11 @@ var baseUrl = if (gradle.startParameter.taskRequests.toString().contains("Releas
 }
 
 android {
-    namespace = "com.picpay.desafio.android"
-    compileSdk = 34
+    namespace = "com.picpay.desafio.android.core.network"
+    compileSdk = 35
 
     defaultConfig {
-        minSdk = 26
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles("consumer-rules.pro")
+        minSdk = 21
     }
 
     buildTypes {
