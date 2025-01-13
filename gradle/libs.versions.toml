@@ -28,6 +28,8 @@ compose = "1.7.6"
 coil = "2.5.0"
 compose-navigation = "2.8.5"
 gson = "2.10.1"
+room = "2.6.1"
+mockk = "1.13.2"
 
 [libraries]
 kotlinStdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
@@ -64,7 +66,8 @@ koinTest = { module = "io.insert-koin:koin-test", version.ref = "koin" }
 testRunner = { module = "androidx.test:runner", version.ref = "testRunner" }
 espressoCore = { module = "androidx.test.espresso:espresso-core", version.ref = "espresso" }
 testCoreKtx = { module = "androidx.test:core-ktx", version.ref = "coreKtxTest" }
-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+ext-junit = { module = "androidx.test.ext:junit", version.ref = "junitVersion" }
+mockk-core = { module = "io.mockk:mockk", version.ref = "mockk" }
 navigation-fragment-ktx = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "navigation" }
 navigation-ui-ktx = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigation" }
 androidx-compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
@@ -74,7 +77,10 @@ androidx-compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", versi
 androidx-compose-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "compose" }
 navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "compose-navigation" }
 androidx-compose-foundation = { module = "androidx.compose.foundation:foundation-layout", version.ref = "compose" }
-
+androidx-room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+androidx-room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+androidx-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
+androidx-room-testing = { group = "androidx.room", name = "room-testing", version.ref = "room" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

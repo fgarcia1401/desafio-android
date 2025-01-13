@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "comcom.picpay.desafio.android.core.compose"
+    namespace = "com.picpay.desafio.android.core.compose"
     compileSdk = 35
 
     defaultConfig {

@@ -43,6 +43,12 @@ dependencies {
 
     implementation(libs.androidx.compose.ui)
 
-    androidTestImplementation(libs.ext.junit)
-    androidTestImplementation(libs.espressoCore)
+    // Coroutines
+    implementation(libs.coroutinesAndroid)
+    implementation(libs.coroutinesTest)
+
+    implementation(libs.ext.junit)
+
+
+
 }

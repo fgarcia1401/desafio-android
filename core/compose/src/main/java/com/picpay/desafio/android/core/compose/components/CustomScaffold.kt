@@ -1,4 +1,4 @@
-package comcom.picpay.desafio.android.core.compose.components
+package com.picpay.desafio.android.core.compose.components
 
 import androidx.compose.material.Scaffold
 import androidx.compose.material.ScaffoldState

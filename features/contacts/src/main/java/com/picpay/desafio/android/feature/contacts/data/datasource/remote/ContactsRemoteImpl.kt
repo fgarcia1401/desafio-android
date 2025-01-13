@@ -5,7 +5,7 @@ import org.koin.core.annotation.Single
 
 @Single
 class ContactsRemoteImpl(
-    private val service: PicPayService
+    private val service: PicPayService,
 ) : ContactsRemote {
     override suspend fun getContacts() = service.getUsers()
 }

@@ -8,5 +8,7 @@ import org.koin.core.annotation.Factory
 class FetchContactsUseCaseImpl(
     private val repository: ContactsRepository
 ) : FetchContactsUseCase {
+
     override suspend fun invoke() = flow { emit(repository.getContacts()) }
+
 }

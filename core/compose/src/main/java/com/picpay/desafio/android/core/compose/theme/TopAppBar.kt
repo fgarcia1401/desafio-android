@@ -1,4 +1,4 @@
-package comcom.picpay.desafio.android.core.compose.theme
+package com.picpay.desafio.android.core.compose.theme
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.runtime.Composable

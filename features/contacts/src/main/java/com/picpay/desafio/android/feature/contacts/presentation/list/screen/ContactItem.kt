@@ -24,8 +24,8 @@ import androidx.compose.ui.unit.dp
 import coil.compose.SubcomposeAsyncImage
 import coil.request.ImageRequest
 import com.picpay.desafio.android.feature.contacts.domain.model.User
-import comcom.picpay.desafio.android.core.compose.theme.ColorPrimaryDark
-import comcom.picpay.desafio.android.core.compose.theme.Dimens.PaddingMedium
+import com.picpay.desafio.android.core.compose.theme.ColorPrimaryDark
+import com.picpay.desafio.android.core.compose.theme.Dimens.PaddingMedium
 
 @Composable
 fun ContactItem(

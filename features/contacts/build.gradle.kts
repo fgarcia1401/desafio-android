@@ -39,6 +39,11 @@ android {
         compose = true
     }
 
+    packaging {
+        resources.excludes.add("META-INF/LICENSE.md")
+        resources.excludes.add("META-INF/LICENSE-notice.md")
+    }
+
 }
 
 
@@ -46,6 +51,7 @@ dependencies {
     implementation(project(":core:network"))
     implementation(project(":core:compose"))
     implementation(project(":common"))
+    implementation(project(":common-test"))
 
     implementation(libs.kotlinStdlib)
     implementation(libs.coreKtx)
@@ -88,10 +94,15 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
 
+    //Room
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.room.ktx)
+    ksp(libs.androidx.room.compiler)
+
     testImplementation(libs.junit)
-    testImplementation(libs.mockitoCore)
-    testImplementation(libs.mockitoKotlin)
+    testImplementation(libs.mockk.core)
     implementation(libs.koinTest)
+    testImplementation(libs.androidx.room.testing)
 
     androidTestImplementation(libs.testRunner)
     androidTestImplementation(libs.espressoCore)

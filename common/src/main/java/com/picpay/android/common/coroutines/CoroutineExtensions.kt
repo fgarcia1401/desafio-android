@@ -3,10 +3,8 @@ package com.picpay.android.common.coroutines
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.lifecycle.Lifecycle
-import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.compose.LocalLifecycleOwner
-import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.channels.Channel
@@ -28,14 +26,6 @@ suspend fun <T> Flow<T>.safeFlowCollect(
         onError(e)
     } finally {
         onCompletion()
-    }
-}
-
-fun <T> LifecycleOwner.observe(flow: Flow<T>, action: (t: T) -> Unit) {
-    lifecycleScope.launch {
-        lifecycle.repeatOnLifecycle(Lifecycle.State.STARTED) {
-            flow.collect { action(it) }
-        }
     }
 }
 

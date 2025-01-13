@@ -34,13 +34,13 @@ import com.picpay.desafio.android.feature.contacts.presentation.list.ContactsVie
 import com.picpay.desafio.android.feature.contacts.presentation.list.ListContactsEvent
 import com.picpay.desafio.android.feature.contacts.presentation.list.ListContactsState
 import com.picpay.desafio.android.feature.contacts.presentation.list.ListContactsUIEvent
-import comcom.picpay.desafio.android.core.compose.components.CustomScaffold
-import comcom.picpay.desafio.android.core.compose.theme.ColorAccent
-import comcom.picpay.desafio.android.core.compose.theme.ColorPrimaryDark
-import comcom.picpay.desafio.android.core.compose.theme.Dimens.PaddingDefault
-import comcom.picpay.desafio.android.core.compose.theme.Dimens.PaddingLarge
-import comcom.picpay.desafio.android.core.compose.theme.Dimens.PaddingMedium
-import comcom.picpay.desafio.android.core.compose.theme.TopAppBar
+import com.picpay.desafio.android.core.compose.components.CustomScaffold
+import com.picpay.desafio.android.core.compose.theme.ColorAccent
+import com.picpay.desafio.android.core.compose.theme.ColorPrimaryDark
+import com.picpay.desafio.android.core.compose.theme.Dimens.PaddingDefault
+import com.picpay.desafio.android.core.compose.theme.Dimens.PaddingLarge
+import com.picpay.desafio.android.core.compose.theme.Dimens.PaddingMedium
+import com.picpay.desafio.android.core.compose.theme.TopAppBar
 import org.koin.androidx.compose.koinViewModel
 
 @Composable
