@@ -67,7 +67,6 @@ dependencies {
     ksp(libs.koin.compiler)
 
     implementation(libs.lifecycleViewModelKtx)
-    implementation(libs.lifecycleLiveDataKtx)
     implementation(libs.lifecycleRuntimeKtx)
 
     implementation(libs.coroutinesCore)

@@ -26,6 +26,7 @@ import coil.request.ImageRequest
 import com.picpay.desafio.android.feature.contacts.domain.model.User
 import com.picpay.desafio.android.core.compose.theme.ColorPrimaryDark
 import com.picpay.desafio.android.core.compose.theme.Dimens.PaddingMedium
+import com.picpay.desafio.android.feature.contacts.R
 
 @Composable
 fun ContactItem(
@@ -78,18 +79,22 @@ private fun ShowAvatar(contact: User) {
             model = ImageRequest.Builder(context)
                 .data(contact.img)
                 .crossfade(true)
+                .error(R.drawable.ic_account_place_holder)
                 .build(),
             contentDescription = "Profile Picture",
             contentScale = ContentScale.Crop,
             modifier = Modifier.fillMaxSize(),
-            loading = {
-                CircularProgressIndicator(
-                    color = Color.White,
-                    modifier = Modifier.fillMaxWidth(),
-                )
-            }
+            loading = { Loading() }
         )
     }
+}
+
+@Composable
+private fun Loading() {
+    CircularProgressIndicator(
+        color = Color.White,
+        modifier = Modifier.fillMaxWidth(),
+    )
 }
 
 @Preview

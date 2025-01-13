@@ -65,40 +65,17 @@ dependencies {
     implementation(libs.kotlinStdlib)
     implementation(libs.coreKtx)
     implementation(libs.appCompat)
-    implementation(libs.constraintLayout)
     implementation(libs.material)
+    implementation(libs.constraintLayout)
 
     implementation(libs.koinCore)
     implementation(libs.koinAndroid)
     implementation(libs.koin.annotations)
     ksp(libs.koin.compiler)
 
-    implementation(libs.lifecycleViewModelKtx)
-    implementation(libs.lifecycleLiveDataKtx)
-    implementation(libs.lifecycleRuntimeKtx)
-
     implementation(libs.coroutinesCore)
     implementation(libs.coroutinesAndroid)
     testImplementation(libs.coroutinesTest)
-
-    implementation(libs.rxjava)
-    implementation(libs.rxandroid)
-
-    implementation(libs.gson)
-
-    implementation(libs.retrofit)
-    implementation(libs.retrofitAdapterRxjava2)
-    implementation(libs.retrofitConverterGson)
-    implementation(libs.okhttp)
-    implementation(libs.mockwebserver)
-
-    implementation(libs.picasso)
-    implementation(libs.circleImageView)
-
-    testImplementation(libs.junit)
-    testImplementation(libs.mockitoCore)
-    testImplementation(libs.mockitoKotlin)
-    implementation(libs.koinTest)
 
     androidTestImplementation(libs.testRunner)
     androidTestImplementation(libs.espressoCore)
