@@ -31,7 +31,6 @@ class FetchContactsUseCaseTest {
 
     private lateinit var useCase: FetchContactsUseCase
 
-
     @Before
     fun setUp() {
         clearAllMocks()

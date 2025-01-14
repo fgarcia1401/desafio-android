@@ -43,7 +43,7 @@ class ContactsActivityTest : KoinTest {
             verify {
                 areContactDetailsDisplayed("User mockado")
                 areContactDetailsDisplayed("@mock")
-                areContactDetailsDisplayed("User mockado")
+                areContactDetailsDisplayed("Usuário Mock")
                 areContactDetailsDisplayed("@mockuser")
             }
             closeActivityScenario()

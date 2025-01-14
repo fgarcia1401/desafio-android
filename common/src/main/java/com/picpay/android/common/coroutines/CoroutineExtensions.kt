@@ -18,15 +18,12 @@ suspend fun <T> Flow<T>.safeFlowCollect(
     onCompletion: () -> Unit = {}
 ) {
     onStart()
-    try {
+    runCatching {
         collect { value ->
             success(value)
         }
-    } catch (e: Throwable) {
-        onError(e)
-    } finally {
-        onCompletion()
-    }
+    }.onFailure { throwable -> onError(throwable) }
+     .also { onCompletion() }
 }
 
 fun <T, V : ViewModel> Channel<T>.sendInScope(scope: V, vararg event: T) {
