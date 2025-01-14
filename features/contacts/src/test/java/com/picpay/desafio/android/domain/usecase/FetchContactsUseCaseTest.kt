@@ -61,5 +61,4 @@ class FetchContactsUseCaseTest {
 
     @After
     fun tearDown() = unmockkAll()
-
 }

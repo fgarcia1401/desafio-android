@@ -29,11 +29,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import com.picpay.android.common.coroutines.collectWithLifecycle
-import com.picpay.desafio.android.feature.contacts.R
-import com.picpay.desafio.android.feature.contacts.presentation.list.ContactsViewModel
-import com.picpay.desafio.android.feature.contacts.presentation.list.ListContactsEvent
-import com.picpay.desafio.android.feature.contacts.presentation.list.ListContactsState
-import com.picpay.desafio.android.feature.contacts.presentation.list.ListContactsUIEvent
 import com.picpay.desafio.android.core.compose.components.CustomScaffold
 import com.picpay.desafio.android.core.compose.theme.ColorAccent
 import com.picpay.desafio.android.core.compose.theme.ColorPrimaryDark
@@ -41,6 +36,11 @@ import com.picpay.desafio.android.core.compose.theme.Dimens.PaddingDefault
 import com.picpay.desafio.android.core.compose.theme.Dimens.PaddingLarge
 import com.picpay.desafio.android.core.compose.theme.Dimens.PaddingMedium
 import com.picpay.desafio.android.core.compose.theme.TopAppBar
+import com.picpay.desafio.android.feature.contacts.R
+import com.picpay.desafio.android.feature.contacts.presentation.list.ContactsViewModel
+import com.picpay.desafio.android.feature.contacts.presentation.list.ListContactsEvent
+import com.picpay.desafio.android.feature.contacts.presentation.list.ListContactsState
+import com.picpay.desafio.android.feature.contacts.presentation.list.ListContactsUIEvent
 import org.koin.androidx.compose.koinViewModel
 
 @Composable
@@ -70,7 +70,6 @@ fun ContactsScreen(
                 .padding(innerPadding)
                 .background(ColorPrimaryDark)
         ) {
-
             Text(
                 text = stringResource(R.string.title_list),
                 style = MaterialTheme.typography.h5,
