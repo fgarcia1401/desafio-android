@@ -28,7 +28,6 @@ class ContactsModuleTest : KoinTest {
 
     @Test
     fun `check contacts modules definitions bounding`() {
-
         val requiredDependencies = module {
             factory<ContactsRepository> { relaxedMock() }
             factory<ContactsRemote> { relaxedMock() }
