@@ -1,0 +1,14 @@
+[
+  {
+  "id": 1,
+  "name": "Usuário Mock",
+  "img": "",
+  "username": "@mockuser"
+  },
+  {
+    "id": 2,
+    "name": "User mockado",
+    "img": "",
+    "username": "@mock"
+  }
+]

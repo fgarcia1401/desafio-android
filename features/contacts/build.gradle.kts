@@ -13,7 +13,7 @@ android {
     defaultConfig {
         minSdk = 21
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = "com.picpay.desafio.android.contacts.util.KoinTestRunner"
         consumerProguardFiles("consumer-rules.pro")
     }
 
@@ -74,6 +74,7 @@ dependencies {
     testImplementation(libs.coroutinesTest)
 
     implementation(libs.gson)
+    implementation(libs.retrofitConverterGson)
 
     implementation(libs.retrofit)
     implementation(libs.okhttp)
@@ -90,6 +91,7 @@ dependencies {
     implementation(libs.navigation.fragment.ktx)
     implementation(libs.navigation.ui.ktx)
     implementation(libs.navigation.compose)
+
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
 
@@ -98,12 +100,20 @@ dependencies {
     implementation(libs.androidx.room.ktx)
     ksp(libs.androidx.room.compiler)
 
+    // Test
     testImplementation(libs.junit)
     testImplementation(libs.mockk.core)
     implementation(libs.koinTest)
+    implementation(libs.androidx.ui.test.junit4.android)
     testImplementation(libs.androidx.room.testing)
 
+    testImplementation(libs.mockwebserver)
+    androidTestImplementation(libs.mockwebserver)
     androidTestImplementation(libs.testRunner)
     androidTestImplementation(libs.espressoCore)
+    androidTestImplementation(libs.koin.test.junit4)
     androidTestImplementation(libs.testCoreKtx)
+    androidTestImplementation(libs.mockk.core)
+    androidTestImplementation(libs.mockk.android)
+
 }

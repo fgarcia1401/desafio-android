@@ -1,10 +1,10 @@
 package com.picpay.desafio.android.commontest
 
-
+import android.content.Context
 import java.io.IOException
 import java.nio.charset.StandardCharsets
 
-object UnitTestUtils {
+object TestUtils {
 
     fun getJson(fileName: String, classLoader: ClassLoader): String? {
         return try {
@@ -19,6 +19,15 @@ object UnitTestUtils {
         } catch (e: IOException) {
             e.printStackTrace()
             null
+        }
+    }
+
+    fun getJsonFromFile(context: Context, fileName: String): String {
+        return try {
+            context.assets.open(fileName).bufferedReader().use { it.readText() }
+        } catch (ioException: IOException) {
+            ioException.printStackTrace()
+            ""
         }
     }
 

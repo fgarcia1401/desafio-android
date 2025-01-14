@@ -1,6 +1,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.picpay.desafio.android.feature.contacts">
-    <application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:theme="@style/AppTheme">
         <activity android:name=".presentation.main.ContactsActivity" android:exported="false"/>
     </application>
 </manifest>

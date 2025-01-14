@@ -20,7 +20,6 @@ android {
             useSupportLibrary = true
         }
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
@@ -72,18 +71,6 @@ dependencies {
     implementation(libs.koinAndroid)
     implementation(libs.koin.annotations)
     ksp(libs.koin.compiler)
-
-    implementation(libs.coroutinesCore)
-    implementation(libs.coroutinesAndroid)
-    testImplementation(libs.coroutinesTest)
-
-    androidTestImplementation(libs.testRunner)
-    androidTestImplementation(libs.espressoCore)
-    androidTestImplementation(libs.testCoreKtx)
-
-    // Navigation Component
-    implementation(libs.navigation.fragment.ktx)
-    implementation(libs.navigation.ui.ktx)
 
     // Jetpack Compose
     implementation(libs.androidx.compose.ui)

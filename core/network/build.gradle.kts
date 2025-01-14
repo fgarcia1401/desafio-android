@@ -6,6 +6,7 @@ plugins {
 
 val baseUrlProd = "\"https://609a908e0f5a13001721b74e.mockapi.io/picpay/api/\""
 val baseUrlQa = "\"https://609a908e0f5a13001721b74e.mockapi.io/picpay/api/\""
+val baseUrlMock = "\"http://127.0.0.1:50001/\""
 
 var baseUrl = if (gradle.startParameter.taskRequests.toString().contains("Release")) {
     baseUrlProd
@@ -25,6 +26,7 @@ android {
         buildTypes {
             getByName("debug") {
                 buildConfigField("String", "BASE_URL", baseUrl)
+                buildConfigField("String", "BASE_URL_MOCK", baseUrlMock)
             }
             getByName("release") {
                 buildConfigField("String", "BASE_URL", baseUrl)

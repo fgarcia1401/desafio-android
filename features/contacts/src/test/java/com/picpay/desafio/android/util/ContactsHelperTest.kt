@@ -2,7 +2,7 @@ package com.picpay.desafio.android.util
 
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import com.picpay.desafio.android.commontest.UnitTestUtils.getJson
+import com.picpay.desafio.android.commontest.TestUtils.getJson
 import com.picpay.desafio.android.feature.contacts.data.entities.ContactEntity
 import com.picpay.desafio.android.feature.contacts.data.entities.UserResponse
 import com.picpay.desafio.android.feature.contacts.domain.model.User
