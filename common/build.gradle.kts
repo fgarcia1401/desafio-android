@@ -32,7 +32,6 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
-
 }
 
 dependencies {
@@ -48,7 +47,4 @@ dependencies {
     implementation(libs.coroutinesTest)
 
     implementation(libs.ext.junit)
-
-
-
 }

@@ -22,13 +22,6 @@ console-reports:
     #  - 'FindingsReport'
     - 'FileBasedFindingsReport'
 
-output-reports:
-  active: true
-  exclude:
-  # - 'TxtOutputReport'
-  # - 'XmlOutputReport'
-  # - 'HtmlOutputReport'
-
 comments:
   active: true
   AbsentOrWrongFileLicense:

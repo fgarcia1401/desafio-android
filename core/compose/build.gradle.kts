@@ -38,7 +38,6 @@ dependencies {
     implementation(libs.appCompat)
     implementation(libs.material)
 
-
     // Jetpack Compose
     implementation(libs.androidx.compose.ui)
     implementation(libs.androidx.compose.material)

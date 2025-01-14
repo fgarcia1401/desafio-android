@@ -39,7 +39,6 @@ android {
         resources.excludes.add("META-INF/LICENSE.md")
         resources.excludes.add("META-INF/LICENSE-notice.md")
     }
-
 }
 
 dependencies {
@@ -92,7 +91,7 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
 
-    //Room
+    // Room
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.room.ktx)
     ksp(libs.androidx.room.compiler)
@@ -112,5 +111,4 @@ dependencies {
     androidTestImplementation(libs.testCoreKtx)
     androidTestImplementation(libs.mockk.core)
     androidTestImplementation(libs.mockk.android)
-
 }
