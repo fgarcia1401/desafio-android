@@ -48,7 +48,6 @@ fun ContactsScreen(
     viewModel: ContactsViewModel = koinViewModel(),
     context: Context = LocalContext.current
 ) {
-
     val state by viewModel.state.collectAsState()
     val scaffoldState = rememberScaffoldState()
 
