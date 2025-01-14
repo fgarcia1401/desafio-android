@@ -5,5 +5,4 @@ import kotlinx.coroutines.flow.Flow
 
 interface FetchContactsUseCase {
     suspend operator fun invoke(): Flow<List<User>>
-
 }

@@ -10,5 +10,4 @@ class FetchContactsUseCaseImpl(
 ) : FetchContactsUseCase {
 
     override suspend fun invoke() = flow { emit(repository.getContacts()) }
-
 }

@@ -1,6 +1,5 @@
 package com.picpay.desafio.android.feature.contacts.di
 
-import android.content.Context
 import com.picpay.desafio.android.feature.contacts.data.api.PicPayService
 import com.picpay.desafio.android.feature.contacts.data.datasource.local.ContactDao
 import com.picpay.desafio.android.feature.contacts.data.database.ContactDataBase
@@ -9,6 +8,7 @@ import org.koin.core.annotation.ComponentScan
 import org.koin.core.annotation.Module
 import org.koin.core.annotation.Single
 import retrofit2.Retrofit
+import android.content.Context
 
 @Module
 @ComponentScan("com.picpay.desafio.android.feature.contacts")

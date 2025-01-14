@@ -16,7 +16,6 @@ import org.junit.Test
 import kotlinx.coroutines.test.runTest
 import kotlin.test.assertEquals
 
-
 @ExperimentalCoroutinesApi
 class ContactsLocalTest {
 
@@ -57,5 +56,4 @@ class ContactsLocalTest {
 
     @After
     fun tearDown() = unmockkAll()
-
 }

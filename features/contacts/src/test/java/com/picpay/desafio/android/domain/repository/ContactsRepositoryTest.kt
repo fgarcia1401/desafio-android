@@ -12,10 +12,8 @@ import com.picpay.desafio.android.util.ContactsHelperTest.getFakeContactsEntity
 import com.picpay.desafio.android.util.ContactsHelperTest.getFakeContactsResponse
 import io.mockk.clearAllMocks
 import io.mockk.coEvery
-import io.mockk.coVerify
 import junit.framework.TestCase.assertEquals
 import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.flow.toList
 import kotlinx.coroutines.test.runTest
 import org.junit.Before
 import org.junit.Rule
@@ -61,11 +59,10 @@ class ContactsRepositoryTest {
             local.getContactsLocal()
             local.saveContacts(contactsEntity)
         }
-
     }
 
     @Test
-    fun `get contacts should return local contacts when remote fetch throws exception but local data exists`() = runTest {
+    fun `getContacts should return local contacts when remote fetch throws exception but local`() = runTest {
         val contactsEntity = getFakeContactsEntity()
         val expectedContacts = getFakeContacts()
 
@@ -102,6 +99,4 @@ class ContactsRepositoryTest {
 
         coVerifyOnce { local.saveContacts(contactEntities) }
     }
-
-
 }

@@ -3,27 +3,23 @@ plugins {
     alias(libs.plugins.kotlinAndroid)
     alias(libs.plugins.ksp)
     alias(libs.plugins.compose.compiler)
+    alias(libs.plugins.detekt)
     id("kotlin-parcelize")
 }
 
 android {
     namespace = "com.picpay.desafio.android.feature.contacts"
-    compileSdk = 35
+    compileSdk = libs.versions.compileSdk.get().toInt()
 
     defaultConfig {
-        minSdk = 21
+        minSdk = libs.versions.minSdk.get().toInt()
 
         testInstrumentationRunner = "com.picpay.desafio.android.contacts.util.KoinTestRunner"
-        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
         release {
             isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
         }
     }
     compileOptions {
@@ -45,7 +41,6 @@ android {
     }
 
 }
-
 
 dependencies {
     implementation(project(":core:network"))
@@ -79,6 +74,8 @@ dependencies {
     implementation(libs.retrofit)
     implementation(libs.okhttp)
     implementation(libs.mockwebserver)
+
+    detektPlugins(libs.detekt.formatting)
 
     // Navigation Component
     implementation(libs.navigation.fragment.ktx)

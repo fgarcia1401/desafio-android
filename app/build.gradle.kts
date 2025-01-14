@@ -7,14 +7,14 @@ plugins {
 
 android {
     namespace = "com.picpay.desafio.android"
-    compileSdk = 35
+    compileSdk = libs.versions.compileSdk.get().toInt()
 
     defaultConfig {
         applicationId = "com.picpay.desafio.android"
-        minSdk = 21
-        targetSdk = 35
-        versionCode = 1
-        versionName = "1.0"
+        minSdk = libs.versions.minSdk.get().toInt()
+        targetSdk = libs.versions.targetSdk.get().toInt()
+        versionCode = libs.versions.versionCode.get().toInt()
+        versionName = libs.versions.versionName.get()
 
         vectorDrawables {
             useSupportLibrary = true
@@ -71,16 +71,6 @@ dependencies {
     implementation(libs.koinAndroid)
     implementation(libs.koin.annotations)
     ksp(libs.koin.compiler)
-
-    // Jetpack Compose
-    implementation(libs.androidx.compose.ui)
-    implementation(libs.androidx.compose.material)
-    implementation(libs.androidx.compose.ui.tooling.preview)
-    implementation(libs.navigation.compose)
-    implementation(libs.androidx.compose.foundation)
-
-    debugImplementation(libs.androidx.compose.ui.tooling)
-    debugImplementation(libs.androidx.compose.ui.test.manifest)
 }
 
 

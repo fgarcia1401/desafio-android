@@ -4,7 +4,6 @@ import android.content.Context
 import com.picpay.android.common.coroutines.CustomDispatchers
 import com.picpay.desafio.android.commontest.relaxedMock
 import com.picpay.desafio.android.core.network.BuildConfig
-import com.picpay.desafio.android.core.network.providers.NetworkConfigurationProvider
 import com.picpay.desafio.android.feature.contacts.data.api.PicPayService
 import com.picpay.desafio.android.feature.contacts.data.database.ContactDataBase
 import com.picpay.desafio.android.feature.contacts.data.datasource.local.ContactDao
@@ -14,12 +13,9 @@ import com.picpay.desafio.android.feature.contacts.data.repository.ContactsRepos
 import com.picpay.desafio.android.feature.contacts.di.ContactsModule
 import com.picpay.desafio.android.feature.contacts.domain.usecase.fetchContacts.FetchContactsUseCase
 import com.picpay.desafio.android.feature.contacts.presentation.list.ContactsViewModel
-import io.mockk.every
 import io.mockk.mockk
 import org.junit.After
 import org.junit.Test
-import org.koin.android.ext.koin.androidContext
-import org.koin.core.component.get
 import org.koin.core.context.startKoin
 import org.koin.core.context.stopKoin
 import org.koin.dsl.module
@@ -27,7 +23,6 @@ import org.koin.ksp.generated.module
 import org.koin.test.KoinTest
 import org.koin.test.check.checkModules
 import retrofit2.Retrofit
-
 
 class ContactsModuleTest : KoinTest {
 
@@ -65,5 +60,4 @@ class ContactsModuleTest : KoinTest {
 
     @After
     fun after() = stopKoin()
-
 }

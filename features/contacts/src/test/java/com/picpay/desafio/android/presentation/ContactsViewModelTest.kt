@@ -62,11 +62,10 @@ class ContactsViewModelTest {
         coVerifyOnce { useCase.invoke() }
 
         observe(viewModel.uiEvent) { viewModel.onEvent(Initialize) }.hasNotEvent<ShowError>()
-
     }
 
     @Test
-    fun `when exception show default error and not show contacts`()= runTest {
+    fun `when exception show default error and not show contacts`() = runTest {
         coEvery { useCase.invoke() } returns flowException()
 
         observe(viewModel.uiEvent) {
@@ -83,5 +82,4 @@ class ContactsViewModelTest {
 
     @After
     fun tearDown() = unmockkAll()
-
 }

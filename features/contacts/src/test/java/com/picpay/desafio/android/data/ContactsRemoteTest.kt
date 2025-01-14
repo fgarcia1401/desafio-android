@@ -8,8 +8,6 @@ import com.picpay.desafio.android.feature.contacts.data.entities.UserResponse
 import com.picpay.desafio.android.util.ContactsHelperTest.getFakeContactsResponse
 import io.mockk.clearAllMocks
 import io.mockk.coEvery
-import io.mockk.coVerify
-import io.mockk.mockk
 import io.mockk.unmockkAll
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runTest
@@ -63,9 +61,7 @@ class ContactsRemoteTest {
 
         remote.getContacts()
     }
-    
 
     @After
     fun tearDown() = unmockkAll()
-
 }

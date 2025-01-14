@@ -15,5 +15,4 @@ class ContactLocalSourceImpl(
         contactDao.deleteAllContacts()
         contactDao.insertAll(contacts)
     }
-
 }

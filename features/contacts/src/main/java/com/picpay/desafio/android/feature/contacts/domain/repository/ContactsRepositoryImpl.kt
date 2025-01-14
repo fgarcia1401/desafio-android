@@ -37,5 +37,4 @@ class ContactsRepositoryImpl(
         local.getContactsLocal().takeIf { it.isNotEmpty() }?.let { contacts ->
             contacts.map { ContactsEntityMapper.transform(it) }
         } ?: run { throw throwable }
-
 }

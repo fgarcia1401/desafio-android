@@ -15,7 +15,6 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import org.koin.core.annotation.Factory
 
-
 @Factory
 class ContactsViewModel(
     private val contactsUseCase: FetchContactsUseCase
@@ -57,8 +56,10 @@ class ContactsViewModel(
     }
 
     private fun showError() =
-        _uiEvent.sendInScope(this, ListContactsUIEvent.ShowError(
-            messageResId = R.string.error_list)
+        _uiEvent.sendInScope(
+            this,
+            ListContactsUIEvent.ShowError(
+                messageResId = R.string.error_list
+            )
         )
-
 }

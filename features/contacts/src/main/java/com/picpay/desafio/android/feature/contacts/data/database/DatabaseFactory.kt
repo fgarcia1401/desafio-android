@@ -12,7 +12,8 @@ object DatabaseFactory {
             val newInstance = Room.databaseBuilder(
                 context.applicationContext,
                 ContactDataBase::class.java,
-                "contacts_database")
+                "contacts_database"
+            )
                 .fallbackToDestructiveMigration()
                 .build()
             instance = newInstance

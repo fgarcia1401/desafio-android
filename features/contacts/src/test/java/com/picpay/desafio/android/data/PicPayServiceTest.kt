@@ -25,11 +25,7 @@ class PicPayServiceTest {
     fun setUp() {
         clearAllMocks()
         server = MockWebServer()
-        service = Retrofit.Builder()
-            .baseUrl(server.url("/"))
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-            .create(PicPayService::class.java)
+        service = createRetrofit()
     }
 
     @Test
@@ -57,17 +53,21 @@ class PicPayServiceTest {
 
     @Test(expected = retrofit2.HttpException::class)
     fun `getUsers should throw HttpException on server error`() = runTest {
-        // Arrange
         server.enqueue(MockResponse().setResponseCode(500))
 
-        // Act
         service.getUsers()
     }
+
+    private fun createRetrofit(): PicPayService =
+        Retrofit.Builder()
+            .baseUrl(server.url("/"))
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+            .create(PicPayService::class.java)
 
     @After
     fun tearDown() {
         unmockkAll()
         server.shutdown()
     }
-
 }
